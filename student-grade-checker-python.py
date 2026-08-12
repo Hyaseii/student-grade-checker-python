@@ -8,7 +8,9 @@ def menu() :
     print("2. Lihat Semua Nilai")
     print("3. Tambah Siswa")
     print("4. Hapus Nama Siswa")
-    print("5. Keluar")
+    print("5. Perbarui Nilai")
+    print("6. Keluar")
+    print()
 
 def status_check(grade) :
     if grade >= 75 :
@@ -45,7 +47,7 @@ while program_running :
         elif unit == 2:
             for name,student_grade_2 in student_grade.items() :
                 status = status_check(student_grade_2)
-                print(name,":",student_grade_2," - ",status)
+                print(name,":",student_grade_2," -",status)
             print()
 
         elif unit == 3:
@@ -62,8 +64,10 @@ while program_running :
                         grade = int(input("Masukan Nilai : "))
                         if grade > 100 :
                             print("Nilai tidak boleh lebih dari 100!")
+                            print()
                         elif grade < 0 :
                             print("Nilai tidak boleh kurang dari 0!")
+                            print()
                         else :     
                             student_grade[name] = grade
                     except ValueError:
@@ -71,7 +75,7 @@ while program_running :
                 else :
                     print(name)
                     print("Nama Tidak Valid")
-  
+
         elif unit == 4 :
             del_name = input("Masukan Nama Siswa yang ingin dihapus : ")
             del_name = del_name.strip().lower()
@@ -83,7 +87,28 @@ while program_running :
                 print(f"Siswa bernama {del_name} tidak ditemukan di dalam daftar nilai.")
                 print()
 
-        elif unit == 5:
+        elif unit == 5 :
+            update_name = input("Masukan nama siswa : ")
+            update_name = update_name.strip().lower()
+            if update_name in student_grade :
+                try :
+                    update_grade = int(input("Masukan nilai terbaru : "))
+                    if update_grade > 100 :
+                        print("Nilai tidak boleh lebih dari 100!")
+                        print()
+                    elif update_grade < 0 :
+                        print("Nilai tidak boleh kurang dari 0!")
+                        print()
+                    else : 
+                        student_grade[update_name] = update_grade
+                        print("Nilai berhasil diperbarui.")
+                        print()
+                except ValueError :
+                    print("Nilai harus berupa angka!")
+            else :
+                print(f"Siswa bernama {update_name} tidak ditemukan.")
+
+        elif unit == 6:
             print("Terimakasih telah menggunakan Student Grade Checker. ")
             program_running = False
 

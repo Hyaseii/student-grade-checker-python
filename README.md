@@ -9,6 +9,7 @@ This project was created as a learning project to practice Python fundamentals, 
 - Check a student's grade
 - View all student grades
 - Add a new student
+- Update a student's grade
 - Delete a student
 - Automatically determine whether a student passes or fails
 - Prevent duplicate student names
@@ -23,22 +24,22 @@ This project uses several basic Python concepts:
 
 - Variables
 - Input and output
-- if, elif, and else
-- while loop
-- for loop
+- `if`, `elif`, and `else`
+- `while` loop
+- `for` loop
 - Functions
 - Parameters and arguments
-- return
+- `return`
 - Dictionary
 - Dictionary methods
-- in operator
-- del
-- .strip()
-- .lower()
-- .replace()
-- .isalpha()
-- try / except
-- ValueError
+- `in` operator
+- `del`
+- `.strip()`
+- `.lower()`
+- `.replace()`
+- `.isalpha()`
+- `try / except`
+- `ValueError`
 - Input validation
 
 # Menu
@@ -52,8 +53,8 @@ STUDENT GRADE CHECKER
 2. Lihat Semua Nilai
 3. Tambah Siswa
 4. Hapus Nama Siswa
-5. Keluar
-
+5. Perbarui Nilai
+6. Keluar
 
 ## Example 
 
@@ -72,20 +73,28 @@ Masukan Nilai : 85
 ## Invalid Grade 
 
 Masukan Nilai : 120
-
 Nilai tidak boleh lebih dari 100!
 
 ## Duplicate Student
 
 Masukan Nama Siswa : Budi
-
 Siswa bernama budi sudah tertera di dalam daftar nilai.
+
+## Student Not Found
+
+Masukan nama siswa : Zaki
+Siswa bernama zaki tidak ditemukan.
 
 ## Version
 
-Version 1.1
+Version 1.2
 
 Changelog
+
+Version 1.2
+- Added student grade update feature
+- Added grade validation for updated grades
+- Improved student grade management
 
 Version 1.1
 - Added student creation
