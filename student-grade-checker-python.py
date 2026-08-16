@@ -9,7 +9,8 @@ def menu() :
     print("3. Tambah Siswa")
     print("4. Hapus Nama Siswa")
     print("5. Perbarui Nilai")
-    print("6. Keluar")
+    print("6. Statistika Nilai")
+    print("7. Keluar")
     print()
 
 def status_check(grade) :
@@ -109,6 +110,20 @@ while program_running :
                 print(f"Siswa bernama {update_name} tidak ditemukan.")
 
         elif unit == 6:
+            print("---STATISTIKA NILAi---")
+            nilai_minimum = min(student_grade.values())
+            nilai_maximum = max(student_grade.values())
+            total = sum(student_grade.values())
+            student_amount = len(student_grade)
+
+            average = total / student_amount
+
+            print("Jumlah Siswa = ",student_amount)
+            print("Nilai Tertinggi = ",nilai_maximum)
+            print("Nilai Terendah : ",nilai_minimum)
+            print("Rata - rata nilai : ", average)             
+
+        elif unit == 7:
             print("Terimakasih telah menggunakan Student Grade Checker. ")
             program_running = False
 
