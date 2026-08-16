@@ -17,6 +17,10 @@ This project was created as a learning project to practice Python fundamentals, 
 - Validate grades between 0 and 100
 - Handle invalid numeric input
 - Case-insensitive student name input
+- grade statistics
+- average grade calculation
+- highest grade detection
+- lowest grade detection
 
 ## Concepts Used
 
@@ -41,6 +45,10 @@ This project uses several basic Python concepts:
 - `try / except`
 - `ValueError`
 - Input validation
+- max()
+- min()
+- len()
+- sum()
 
 # Menu
 
@@ -54,7 +62,8 @@ STUDENT GRADE CHECKER
 3. Tambah Siswa
 4. Hapus Nama Siswa
 5. Perbarui Nilai
-6. Keluar
+8. Statistik Nilai
+7. Keluar
 
 ## Example 
 
@@ -85,11 +94,25 @@ Siswa bernama budi sudah tertera di dalam daftar nilai.
 Masukan nama siswa : Zaki
 Siswa bernama zaki tidak ditemukan.
 
+## Statistik Grade
+
+---STATISTIKA NILAi---
+Jumlah Siswa =  4
+Nilai Tertinggi =  90
+Nilai Terendah :  65
+Rata - rata nilai :  76.25
+
 ## Version
 
-Version 1.2
+Version 1.3
 
 Changelog
+
+Version 1.3
+- Added grade statistics
+- Added average grade calculation
+- Added highest grade detection
+- Added lowest grade detection
 
 Version 1.2
 - Added student grade update feature
