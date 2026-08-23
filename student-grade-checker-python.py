@@ -13,11 +13,26 @@ def menu() :
     print("7. Keluar")
     print()
 
-def status_check(grade) :
-    if grade >= 75 :
-        return("Lulus")
+def status_check(grade):
+    if grade >= 75:
+        return "Lulus"
     else :
-        return("Tidak Lulus")
+        return "Tidak Lulus"
+
+def calculate_average(grades) :
+    total = sum(grades)
+    amount = len(grades)
+    return total / amount
+
+def get_statistic(grades):
+    amount = len(grades)
+    minimum = min(grades)
+    maximum = max(grades)
+    total = sum(grades)
+    average = total /amount
+
+    return amount, minimum, maximum, average
+
 
 student_grade = {
     "andi" : 80, 
@@ -111,16 +126,12 @@ while program_running :
 
         elif unit == 6:
             print("---STATISTIKA NILAi---")
-            nilai_minimum = min(student_grade.values())
-            nilai_maximum = max(student_grade.values())
-            total = sum(student_grade.values())
-            student_amount = len(student_grade)
-
-            average = total / student_amount
+            
+            student_amount, minimum, maximum, average = get_statistic(student_grade.values())
 
             print("Jumlah Siswa = ",student_amount)
-            print("Nilai Tertinggi = ",nilai_maximum)
-            print("Nilai Terendah : ",nilai_minimum)
+            print("Nilai Tertinggi = ",maximum)
+            print("Nilai Terendah : ",minimum)
             print("Rata - rata nilai : ", average)             
 
         elif unit == 7:
